@@ -9,7 +9,7 @@ party and totally forgot. Quoting Uncle Bob, in a set of
 lectures about clean code he gave in 2019, "if a computer
 can do it, a computer should do it"!
 
-![Code section to exemplify how it work](/home/billyjoe/Pictures/Screenshot from 2021-10-09 18-53-28.png)
+![Code section to exemplify how it work](https://user-images.githubusercontent.com/67481026/136674950-57ed8806-95c8-41b9-9dd4-f43cda57ac8c.png)
 
 # How to run the executable?
 This repository contains a simple code and an executable
