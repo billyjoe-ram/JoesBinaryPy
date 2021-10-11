@@ -11,16 +11,21 @@ can do it, a computer should do it"!
 
 ![Code section to exemplify how it work](https://user-images.githubusercontent.com/67481026/136674950-57ed8806-95c8-41b9-9dd4-f43cda57ac8c.png)
 
+# Updates
+- Oct. 11<sup>th</sup>: Added full support for Windows by
+including and .exe file;
+
 # How to run the executable?
 This repository contains a simple code and an executable
 of the program and its files were created using a Linux
 environment (Ubuntu) and PyCharm.
 
-Go to the file /dist/main and run the executable by
-clicking it twice.
+**Windows:** Go to the file /dist/main.exe and run the
+executable by clicking it twice.
 
-If you are using Linux, open the folder mentioned in
-terminal and run "./main"
+Linux:
+Open the folder mentioned in terminal and run the file by
+typing "./main" (with no extension) 
 
 # The script
 
@@ -36,6 +41,7 @@ can be changed in the code;
 number to it;
 
 # Ideas for updates
+- [x] Support for Windows
 - [ ] Implement support for negative numbers;
 
 # Support
