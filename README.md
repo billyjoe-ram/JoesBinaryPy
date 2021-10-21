@@ -55,7 +55,7 @@ Version Beta 1.1:
 - [X] Use TDD;
 
 Version Beta 1.2:
-- [ ] Handle alphanumerics;
+- [X] Handle alphanumerics;
 - [ ] Implement support for decimal numbers;
 - [ ] Simple math operations (Sum and Subtraction).
 

@@ -1,5 +1,4 @@
 import unittest
-
 from binary_from_int import BinaryFromInt
 
 
@@ -23,6 +22,14 @@ class TestBinaryPy(unittest.TestCase):
     def test_negative_binary(self):
         binary_output = BinaryFromInt(-2)
         self.assertEqual(binary_output.binary_number(), '1010')
+
+    def test_not_all_numeric_str(self):
+        binary_output = BinaryFromInt('-test-str2ing')
+        self.assertEqual(binary_output.binary_number(), '1010')
+
+    def test_only_minus_sign(self):
+        binary_output = BinaryFromInt('---')
+        self.assertIsNone(binary_output.binary_number())
 
 
 unittest.main()

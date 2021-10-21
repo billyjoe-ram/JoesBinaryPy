@@ -1,4 +1,3 @@
-import re
 from binary_from_int import BinaryFromInt
 
 print("""
@@ -16,10 +15,11 @@ while True:
         if integer_input == 'quit':
             print('\nBye Bye! :)')
             break
-        elif integer_input.isalpha():
-            print('Invalid input!')
-            continue
 
     binary_number = BinaryFromInt(integer_input)
 
-    print(f"The number you asked for in binary is: {binary_number.binary_number()}")
+    if not binary_number.number() and not binary_number.binary_number():
+        print('Invalid input!')
+        continue
+
+    print(f"The number you asked for ({binary_number.number()}) in binary is: {binary_number.binary_number()}")

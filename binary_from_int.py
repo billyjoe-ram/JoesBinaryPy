@@ -1,12 +1,20 @@
+from filter_alnum import filter_alnum
+
+
 class BinaryFromInt:
     """
         Class created to convert integer to binary number
     """
     def __init__(self, int_number):
-        self.int_number = int(float(int_number))
+        self.int_number = int_number
 
     def number(self):
-        return self.int_number
+        int_number = filter_alnum(self.int_number)
+        if int_number:
+            int_number = int(float(int_number))
+            return int_number
+
+        return None
 
     def binary_number(self):
         return self.parse_integer_to_bin()
@@ -16,6 +24,9 @@ class BinaryFromInt:
             Receives a numeric string as input and returns a string equivalent
             to that number in a binary base.
         """
+        if not self.number():
+            return self.number()
+
         integer_number = self.number() * -1 if self.is_negative() else self.number()
         # Empty string to concat the binary
         binary_string = ""
