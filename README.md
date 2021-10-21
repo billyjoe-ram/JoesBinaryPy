@@ -9,11 +9,10 @@ party and totally forgot. Quoting Uncle Bob, in a set of
 lectures about clean code he gave in 2019, "if a computer
 can do it, a computer should do it"!
 
-![Code section to exemplify how it work](https://user-images.githubusercontent.com/67481026/136674950-57ed8806-95c8-41b9-9dd4-f43cda57ac8c.png)
+![Code section to exemplify how it work](https://user-images.githubusercontent.com/67481026/138018105-29a4142e-b83e-4f54-9930-aa01a218a43e.png)
 
 # Updates
-- Oct. 11<sup>th</sup>: Added full support for Windows
-by including and .exe file;
+- Oct. 19<sup>th</sup>: Version Beta 1.1 finished!
 
 # How to run the executable?
 This repository contains a simple code and an executable
@@ -43,6 +42,9 @@ numbers
 Open the folder in terminal, type "python test_main.py",
 and you'll see a tiny spark of what the Test Driven
 Development can do!
+
+![Unit Tests in Python](https://user-images.githubusercontent.com/67481026/138018202-50d1373e-691c-417b-b21b-b4c736c0470f.png)
+
 
 If you, as a developer, think of new possible test
 cases, please consider following the recommended
