@@ -16,10 +16,11 @@ while True:
             print('\nBye Bye! :)')
             break
 
-    binary_number = BinaryFromInt(integer_input)
+    binary_number = BinaryFromInt()
+    binary_number.number = integer_input
 
-    if not binary_number.number() and not binary_number.binary_number():
+    if not binary_number.number and not binary_number.binary_number:
         print('Invalid input!')
         continue
 
-    print(f"The number you asked for ({binary_number.number()}) in binary is: {binary_number.binary_number()}")
+    print(f"The number you asked for ({binary_number.number}) in binary is: {binary_number.binary_number}")

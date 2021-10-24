@@ -5,17 +5,22 @@ class BinaryFromInt:
     """
         Class created to convert integer to binary number
     """
-    def __init__(self, int_number):
+    def __init__(self, int_number=None):
         self.int_number = int_number
 
+    @property
     def number(self):
-        int_number = filter_alnum(self.int_number)
+        return self.int_number
+
+    @number.setter
+    def number(self, int_number):
+        int_number = filter_alnum(int_number)
         if int_number:
-            int_number = int(float(int_number))
-            return int_number
+            self.int_number = int(float(int_number))
+        else:
+            self.int_number = None
 
-        return None
-
+    @property
     def binary_number(self):
         return self.parse_integer_to_bin()
 
@@ -24,10 +29,10 @@ class BinaryFromInt:
             Receives a numeric string as input and returns a string equivalent
             to that number in a binary base.
         """
-        if not self.number():
-            return self.number()
+        if not self.number:
+            return self.number
 
-        integer_number = self.number() * -1 if self.is_negative() else self.number()
+        integer_number = self.number * -1 if self.is_negative() else self.number
         # Empty string to concat the binary
         binary_string = ""
 
@@ -38,7 +43,7 @@ class BinaryFromInt:
             # Gets the integer part after division
             integer_number = int(integer_number / 2)
 
-        # If is negative, adds the more significant "byte" to represent
+        # If is negative, adds the more significant bit to represent
         # negative
         if self.is_negative():
             binary_string += '01'
@@ -51,6 +56,6 @@ class BinaryFromInt:
         return binary_string
 
     def is_negative(self):
-        if self.number() < 0:
+        if self.number < 0:
             return True
         return False
