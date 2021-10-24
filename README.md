@@ -5,14 +5,24 @@ a number, let's say "33", in binary? Or maybe you really
 don't care about binaries, but your teacher of algorithms
 gave you a list of exercises to convert from decimal to
 various bases (2, 8, 16) but last night you were at a
-party and totally forgot. Quoting Uncle Bob, in a set of
+party and totally forgot it. Quoting Uncle Bob, in a set of
 lectures about clean code he gave in 2019, "if a computer
 can do it, a computer should do it"!
 
 ![Code section to exemplify how it work](https://user-images.githubusercontent.com/67481026/138018105-29a4142e-b83e-4f54-9930-aa01a218a43e.png)
 
 # Updates
-- Oct. 19<sup>th</sup>: Version Beta 1.1 finished!
+- **Oct. 23<sup>th</sup>**: As it was pointed by other developers,
+the binary representation in the script wasn't quite right...
+Two complements doesn't work that simply so I, as efficient as
+possible, am currently thinking and coding a better solution.
+Until there, the negative numbers will be represented with only
+one bit to represent the sign followed by another to separate sign
+from actual value.
+
+
+Also, in this day, more tests were added and the main class for 
+the program was refactored using decorators
 
 # How to run the executable?
 This repository contains a simple code and an executable
@@ -58,6 +68,7 @@ Version Beta 1.1:
 
 Version Beta 1.2:
 - [X] Handle alphanumerics;
+- [ ] Refactor number representation;
 - [ ] Implement support for decimal numbers;
 - [ ] Simple math operations (Sum and Subtraction).
 
