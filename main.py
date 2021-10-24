@@ -1,7 +1,7 @@
-from binary_from_int import BinaryFromInt
+from binary_from_int import BinaryNumber
 
 print("""
-    Welcome to Joe's Binary Py! A simple, easy to use and tested application,
+    Welcome to Joe's BinaryNumber Py! A simple, easy to use and tested application,
     to provide you fast output in any occasion you need! Type 'quit' when
     asked input or Ctrl + C to stop the application  
 """)
@@ -16,7 +16,7 @@ while True:
             print('\nBye Bye! :)')
             break
 
-    binary_number = BinaryFromInt()
+    binary_number = BinaryNumber()
     binary_number.number = integer_input
 
     if not binary_number.number and not binary_number.binary_number:

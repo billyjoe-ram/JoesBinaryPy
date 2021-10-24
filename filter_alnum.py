@@ -16,7 +16,7 @@ def filter_alnum(alnum_text):
             if character not in filtered_alnum:
                 filtered_alnum += character
 
-    if check_no_number_numberic(filtered_alnum):
+    if check_no_number_numeric(filtered_alnum):
         return None
     return filtered_alnum
 
@@ -37,7 +37,7 @@ def check_allowed_chars(character):
     return allow_char
 
 
-def check_no_number_numberic(alnum_text):
+def check_no_number_numeric(alnum_text):
     """
     Checks if, for the string, if
     :param alnum_text:

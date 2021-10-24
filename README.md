@@ -1,4 +1,4 @@
-# Joe's Binary Py
+# Joe's BinaryNumber Py
 
 Are you looking for a simple way to know how to represent
 a number, let's say "33", in binary? Or maybe you really
@@ -12,17 +12,9 @@ can do it, a computer should do it"!
 ![Code section to exemplify how it work](https://user-images.githubusercontent.com/67481026/138018105-29a4142e-b83e-4f54-9930-aa01a218a43e.png)
 
 # Updates
-- **Oct. 23<sup>th</sup>**: As it was pointed by other developers,
-the binary representation in the script wasn't quite right...
-Two complements doesn't work that simply so I, as efficient as
-possible, am currently thinking and coding a better solution.
-Until there, the negative numbers will be represented with only
-one bit to represent the sign followed by another to separate sign
-from actual value.
-
-
-Also, in this day, more tests were added and the main class for 
-the program was refactored using decorators
+- **Oct. 24<sup>th</sup>**: Considering the bits needed to store the number,
+the representation is now readjusted, with the MSB (most significant bit)
+for the sign. TDD is still applied for each tiny part of code.
 
 # How to run the executable?
 This repository contains a simple code and an executable
@@ -68,7 +60,7 @@ Version Beta 1.1:
 
 Version Beta 1.2:
 - [X] Handle alphanumerics;
-- [ ] Refactor number representation;
+- [X] Refactor number representation;
 - [ ] Implement support for decimal numbers;
 - [ ] Simple math operations (Sum and Subtraction).
 

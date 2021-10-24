@@ -1,11 +1,11 @@
 import unittest
-from binary_from_int import BinaryFromInt
+from binary_from_int import BinaryNumber
 
 
 class TestBinaryPy(unittest.TestCase):
     @classmethod
     def setUp(cls):
-        cls.binary_output = BinaryFromInt()
+        cls.binary_output = BinaryNumber()
 
     def test_class(self):
         self.binary_output.number = 2
@@ -21,23 +21,23 @@ class TestBinaryPy(unittest.TestCase):
 
     def test_positive_binary(self):
         self.binary_output.number = 2
-        self.assertEqual(self.binary_output.binary_number, '0010')
+        self.assertEqual(self.binary_output.binary_number, '010')
 
     def test_negative_binary(self):
         self.binary_output.number = -2
-        self.assertEqual(self.binary_output.binary_number, '1010')
+        self.assertEqual(self.binary_output.binary_number, '110')
 
     def test_float_input(self):
         self.binary_output.number = 2.5
-        self.assertEqual(self.binary_output.binary_number, '0010')
+        self.assertEqual(self.binary_output.binary_number, '010')
 
     def test_negative_float_input(self):
         self.binary_output.number = -2.5
-        self.assertEqual(self.binary_output.binary_number, '1010')
+        self.assertEqual(self.binary_output.binary_number, '110')
 
     def test_not_all_numeric_str(self):
         self.binary_output.number = '-test-str2ing'
-        self.assertEqual(self.binary_output.binary_number, '1010')
+        self.assertEqual(self.binary_output.binary_number, '110')
 
     def test_only_minus_sign(self):
         self.binary_output.number = '---'
