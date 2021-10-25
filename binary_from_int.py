@@ -1,24 +1,12 @@
-from filter_alnum import filter_alnum
+from numeric_text import NumericText
 
 
-class BinaryNumber:
+class BinaryNumericText(NumericText):
     """
         Class created to convert integer to binary number
     """
     def __init__(self, int_number=None):
-        self.int_number = int_number
-
-    @property
-    def number(self):
-        return self.int_number
-
-    @number.setter
-    def number(self, int_number):
-        int_number = filter_alnum(int_number)
-        if int_number:
-            self.int_number = int(float(int_number))
-        else:
-            self.int_number = None
+        super().__init__(int_number)
 
     @property
     def binary_number(self):
@@ -32,7 +20,7 @@ class BinaryNumber:
         if not self.number:
             return self.number
 
-        integer_number = self.number * -1 if self.most_significant_bit() else self.number
+        integer_number = self.number * -1 if self.is_negative() else self.number
         # Empty string to concat the binary
         binary_string = ""
 
@@ -45,7 +33,7 @@ class BinaryNumber:
 
         # If is negative, adds the more significant bit to represent
         # negative
-        if self.most_significant_bit():
+        if self.is_negative():
             binary_string += '1'
         else:
             binary_string += '0'
@@ -54,11 +42,6 @@ class BinaryNumber:
         binary_string = binary_string[::-1]
 
         return binary_string
-
-    def most_significant_bit(self):
-        if self.number < 0:
-            return True
-        return False
 
     def check_bits_needed(self):
         """
@@ -73,7 +56,7 @@ class BinaryNumber:
         while abs(self.number) >= (2 ** bits_needed):
             bits_needed += 1
 
-        if self.most_significant_bit():
+        if self.is_negative():
             bits_needed += 1
 
         return bits_needed

@@ -1,11 +1,11 @@
 import unittest
-from binary_from_int import BinaryNumber
+from binary_from_int import BinaryNumericText
 
 
 class TestBinaryPy(unittest.TestCase):
     @classmethod
     def setUp(cls):
-        cls.binary_output = BinaryNumber()
+        cls.binary_output = BinaryNumericText()
 
     def test_class(self):
         self.binary_output.number = 2

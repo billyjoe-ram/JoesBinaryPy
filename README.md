@@ -1,4 +1,4 @@
-# Joe's BinaryNumber Py
+# Joe's BinaryNumericText Py
 
 Are you looking for a simple way to know how to represent
 a number, let's say "33", in binary? Or maybe you really

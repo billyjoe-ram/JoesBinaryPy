@@ -1,5 +1,3 @@
-
-
 def filter_alnum(alnum_text):
     """
     Receives an alphanumeric string and returns its only
