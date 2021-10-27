@@ -31,5 +31,9 @@ class TestBitsInNumber(unittest.TestCase):
         self.binary_output.number = 32
         self.assertEqual(self.binary_output.check_bits_needed(), 6)
 
+    def test_bits_flipped(self):
+        self.binary_output.number = 2
+        self.assertEqual(self.binary_output.binary_bits_flipped(), '101')
+
 
 unittest.main()

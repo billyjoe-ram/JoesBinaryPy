@@ -12,15 +12,47 @@ class BinaryNumericText(NumericText):
     def binary_number(self):
         return self.parse_integer_to_bin()
 
-    def parse_integer_to_bin(self):
+    def binary_bits_flipped(self, binary_number=None):
         """
-            Receives a numeric string as input and returns a string equivalent
-            to that number in a binary base.
+        Receives an the binary number in string as input and returns
+        a string equivalent to that number with the bits flipped.
+        If no number is passed, the value will be the "number" property
+        :param binary_number:
+        :type binary_number: str or None
+        :return: complements_binary
+        :rtype: str
+        """
+        if not binary_number:
+            complements_binary = self.parse_integer_to_bin(self.absolute_number)
+        else:
+            complements_binary = binary_number
+
+        complements_binary = complements_binary.replace('1', 'on')
+        complements_binary = complements_binary.replace('0', 'off')
+
+        complements_binary = complements_binary.replace('on', '0')
+        complements_binary = complements_binary.replace('off', '1')
+
+        return complements_binary
+
+    def parse_integer_to_bin(self, number=None):
+        """
+        Receives an int numeric as input and returns a string equivalent
+        to that number in a binary base. If no number is passed, the
+        value will be the "number" property
+
+        :param number:
+        :type number: int
+        :return: binary_string
+        :rtype: str or None
         """
         if not self.number:
             return self.number
 
-        integer_number = self.number * -1 if self.is_negative() else self.number
+        if number is None:
+            number = self.number
+
+        integer_number = number * -1 if self.is_negative() else number
         # Empty string to concat the binary
         binary_string = ""
 
@@ -42,6 +74,13 @@ class BinaryNumericText(NumericText):
         binary_string = binary_string[::-1]
 
         return binary_string
+
+    def add(self, number_to_add=0):
+        sum_result = self.number + number_to_add
+
+        sum_result = self.parse_integer_to_bin(sum_result)
+
+        return sum_result
 
     def check_bits_needed(self):
         """

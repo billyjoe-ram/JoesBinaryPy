@@ -12,9 +12,9 @@ can do it, a computer should do it"!
 ![Code section to exemplify how it work](https://user-images.githubusercontent.com/67481026/138018105-29a4142e-b83e-4f54-9930-aa01a218a43e.png)
 
 # Updates
-- **Oct. 24<sup>th</sup>**: Considering the bits needed to store the number,
-the representation is now readjusted, with the MSB (most significant bit)
-for the sign. TDD is still applied for each tiny part of code.
+- **Oct. 26<sup>th</sup>**: Using two-complements theory to calculate,
+sum of integer numbers, using the add() method (sum is adding positive
+and subtraction is adding negative)
 
 # How to run the executable?
 This repository contains a simple code and an executable
@@ -61,8 +61,8 @@ Version Beta 1.1:
 Version Beta 1.2:
 - [X] Handle alphanumerics;
 - [X] Refactor number representation;
+- [X] Simple math operations (Sum and Subtraction).
 - [ ] Implement support for decimal numbers;
-- [ ] Simple math operations (Sum and Subtraction).
 
 # Support
 This repository will be available under the MIT license,
