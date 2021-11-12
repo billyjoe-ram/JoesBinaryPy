@@ -13,7 +13,7 @@ class TestBitsInNumber(unittest.TestCase):
 
     def test_min_bits_positive(self):
         self.binary_output.number = 64
-        self.assertEqual(self.binary_output.check_bits_needed(), 7)
+        self.assertEqual(self.binary_output.check_bits_needed(), 8)
 
     def test_min_bits_negative(self):
         self.binary_output.number = -64
@@ -21,19 +21,19 @@ class TestBitsInNumber(unittest.TestCase):
 
     def test_two_bit_representation(self):
         self.binary_output.number = 2
-        self.assertEqual(self.binary_output.check_bits_needed(), 2)
+        self.assertEqual(self.binary_output.check_bits_needed(), 3)
 
     def test_four_bit_representation(self):
         self.binary_output.number = 8
-        self.assertEqual(self.binary_output.check_bits_needed(), 4)
+        self.assertEqual(self.binary_output.check_bits_needed(), 5)
 
     def test_six_bit_representation(self):
         self.binary_output.number = 32
-        self.assertEqual(self.binary_output.check_bits_needed(), 6)
+        self.assertEqual(self.binary_output.check_bits_needed(), 7)
 
     def test_bits_flipped(self):
         self.binary_output.number = 2
-        self.assertEqual(self.binary_output.binary_bits_flipped(), '101')
+        self.assertEqual(self.binary_output.binary_bits_flipped(self.binary_output.binary_number), '101')
 
 
 unittest.main()

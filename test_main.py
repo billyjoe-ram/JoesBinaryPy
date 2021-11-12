@@ -23,9 +23,17 @@ class TestBinaryPy(unittest.TestCase):
         self.binary_output.number = 2
         self.assertEqual(self.binary_output.binary_number, '010')
 
+    def test_positive_same_numbers(self):
+        self.binary_output.number = 11
+        self.assertEqual(self.binary_output.binary_number, '01011')
+
     def test_negative_binary(self):
         self.binary_output.number = -2
         self.assertEqual(self.binary_output.binary_number, '110')
+
+    def test_negative_same_numbers(self):
+        self.binary_output.number = -11
+        self.assertEqual(self.binary_output.binary_number, '11011')
 
     def test_float_input(self):
         self.binary_output.number = 2.5
@@ -54,16 +62,6 @@ class TestBinaryPy(unittest.TestCase):
     def test_abs_value(self):
         self.binary_output.number = -30
         self.assertEqual(self.binary_output.absolute_number, 30)
-
-    def test_positive_sum(self):
-        self.binary_output.number = 15
-        sum_result = self.binary_output.add(5)
-        self.assertEqual(sum_result, '010100')
-
-    def test_negative_sum(self):
-        self.binary_output.number = 5
-        sum_result = self.binary_output.add(-5)
-        self.assertEqual(sum_result, '0')
 
 
 unittest.main()
