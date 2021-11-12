@@ -11,7 +11,7 @@ def filter_alnum(alnum_text):
     filtered_alnum = ""
     for character in str(alnum_text):
         if check_allowed_chars(character):
-            if character not in filtered_alnum:
+            if character not in filtered_alnum or character.isnumeric():
                 filtered_alnum += character
 
     if check_no_number_numeric(filtered_alnum):
