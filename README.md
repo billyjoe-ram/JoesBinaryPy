@@ -1,4 +1,4 @@
-# Joe's BinaryNumericText Py
+i# Joe's BinaryNumericText Py
 
 Are you looking for a simple way to know how to represent
 a number, let's say "33", in binary? Or maybe you really
@@ -12,9 +12,12 @@ can do it, a computer should do it"!
 ![Code section to exemplify how it work](https://user-images.githubusercontent.com/67481026/138018105-29a4142e-b83e-4f54-9930-aa01a218a43e.png)
 
 # Updates
-- **Oct. 26<sup>th</sup>**: Using two-complements theory to calculate,
-sum of integer numbers, using the add() method (sum is adding positive
-and subtraction is adding negative)
+- **Nov. 12<sup>th</sup>**: Since the adding method was kind of broken,
+it was rewritten used TDD, and because the users must be able to
+operate the software properly, all the user interface (unfortunately not
+graphical with Tkinter or similar) had to be rewritten and tested.
+The executable is still only available to Linux, until I put my hands
+in a Windows again.
 
 # How to run the executable?
 This repository contains a simple code and an executable
@@ -56,13 +59,26 @@ steps mentioned in the Support section of this README.
 Version Beta 1.1:
 - [X] Support for Windows;
 - [X] Implement support for negative numbers;
-- [X] Use TDD;
+- [X] Use TDD
 
 Version Beta 1.2:
 - [X] Handle alphanumerics;
 - [X] Refactor number representation;
-- [X] Simple math operations (Sum and Subtraction).
-- [ ] Implement support for decimal numbers;
+- [X] Sum operations
+
+Version Beta 1.3:
+- [ ] Subtraction operations;
+- [ ] Add logs  for math operations;
+- [ ] Implement support for converting decimal numbers
+
+Version Beta 1.4:
+- [ ] Improve the interface with colors and os control (preferably
+cleaning the screen);
+- [ ] Multiplication operations;
+- [ ] Division operations;
+
+Final Beta Version (1.5):
+- [ ] Create a GUI
 
 # Support
 This repository will be available under the MIT license,
